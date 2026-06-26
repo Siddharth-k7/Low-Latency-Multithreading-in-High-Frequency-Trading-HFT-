@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.16)
+project(hft_demo)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -pthread")
+
+add_executable(hft_demo main.cpp)
+
+# Link OpenSSL and Boost (required for live WebSocket feed)
+find_package(OpenSSL QUIET)
+find_package(Boost QUIET COMPONENTS system)
+
+if(OpenSSL_FOUND)
+    target_link_libraries(hft_demo OpenSSL::SSL OpenSSL::Crypto)
+    message(STATUS "OpenSSL found — live WebSocket feed enabled")
+endif()
+
+if(Boost_FOUND)
+    target_link_libraries(hft_demo Boost::system)
+    message(STATUS "Boost found")
+endif()
+
+target_link_libraries(hft_demo pthread)
