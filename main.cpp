@@ -11,11 +11,11 @@
  *   sudo apt install libwebsocketpp-dev libboost-all-dev libssl-dev nlohmann-json3-dev
  *   g++ -std=c++17 -O2 -pthread main.cpp -lssl -lcrypto -lboost_system -o hft_demo
  *
- * Run:
+ * Run: 
  *   export ALPACA_KEY="YOUR_NEW_KEY_HERE"
  *   export ALPACA_SECRET="YOUR_NEW_SECRET_HERE"
  *   ./hft_demo
- */
+ */ 
 
 #include <iostream>
 #include <thread>
