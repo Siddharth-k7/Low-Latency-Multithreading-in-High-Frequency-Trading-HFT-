@@ -1,0 +1,11 @@
+metric,value
+symbol,GOOGL
+orders_sent,2092
+orders_filled,1414
+fill_rate_pct,67.5908
+final_position,40
+final_pnl,-6.9943
+avg_latency_us,1035.6538
+min_latency_us,242.4130
+max_latency_us,4729.0840
+total_ticks,539
